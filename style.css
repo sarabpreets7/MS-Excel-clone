@@ -1,0 +1,495 @@
+body {
+    margin: 0%;
+    padding: 0;
+
+}
+
+    * {
+        box-sizing: border-box;
+    }
+.container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.title-bar{
+    height: 5vh;
+    width: 100vw;
+    background-color: #217346;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.menu-bar{
+    height: 5vh;
+    display: flex;
+    background-color: #217346;
+    
+    
+    
+}
+.menu-bar-item{
+    color: #fff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-bar-item:hover{
+    background-color: #145833;
+}
+.menu-bar-item.selected{
+    background-color: white;
+    color: #217346;
+}
+
+.menu-bar{
+    background-color: #217346;
+    display: flex;
+    height: 4vh;
+
+}
+.menu-bar-icon{
+    display: flex;
+    height: 6vh;
+    align-items: center;
+}
+.menu-icon-bar {
+    display: flex;
+    height: 6vh;
+    align-items: center;
+}
+.menu-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    height: 100%;
+    
+}
+#font-family{
+    height: 80%;
+    width: 10vw;
+    font-family: Noto Sans;
+    min-width: 130px;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+#font-size{
+    height: 80%;
+    width: 3.5vw;
+    min-width: 50px;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+
+}
+.formula-bar{
+    display: flex;
+    background-color: rgb(196, 190, 190);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5vh;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+
+}
+.formula-editor{
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    
+    overflow: hidden;
+    background-color: #fff;
+}
+#selected-cell{
+    padding-left: 0.7rem;
+    width: 120px;
+    height: 70%;
+    display: flex;
+    
+    align-items: center;
+}
+#function-input{
+    width: calc(100vw - 160px);
+    height: 70%;
+    display: flex;
+    
+    align-items: center;
+}
+#function-sign{
+    width: 40px;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.data-container{
+    height: 74.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    
+}
+#select-all{
+    height: 25px;
+    width: 25px;
+    border: 1px solid lightgray;
+}
+#columns{
+    height: 25px;
+    width: calc(100vw - 25.5px);
+    border: 1px solid lightgray;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+#rows{
+    height: calc(74.5vh - 25.5px);
+    width: 25px;
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+#cells{
+    position: relative;
+    height: calc(74.5vh - 25.5px);
+    width: calc(100% - 25.5px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+    
+}
+.column-name{
+    border-right: 1px solid lightgray;
+    min-width: 100px;
+    font-weight: 600;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-name{
+    height: 25px;
+    min-height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    font-weight: 600;
+}
+#cells{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: calc(74vh - 25.5px);
+    width: calc(100vw - 25.5px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+.input-cell{
+    height: 25px;
+    width: 100px;
+    min-width: 100px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding-left: 3px;
+    padding-right: 3px;
+    overflow: hidden;
+    display: flex;
+    font-size: 14px;
+    font-family: Noto Sans;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-cell.selected{
+    border: 3px solid #217346;
+    outline-color:#217346;
+}
+
+.input-cell.top-selected{
+    border-top:none;
+
+}
+.input-cell.bottom-selected{
+    border-bottom: 0.5px solid lightgray
+}
+.input-cell.right-selected{
+    
+    border-right:0.5px solid lightgray;
+}
+.input-cell.left-selected{
+    border-left:none;
+}
+.cell-row{
+    display: flex;
+}
+.menu-icon.selected{
+    background-color: lightgray;
+}
+.alignment.selected{
+    background-color: lightgray;
+}
+#fill-color-icon{
+    border-bottom: 4px solid #fff;
+    padding-bottom: 2px;
+}
+#text-color-icon {
+    border-bottom: 4px solid #444;
+    padding-bottom: 2px;
+}
+.menu-icon:hover{
+    background-color: lightgray;
+}
+.sheet-bar{
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    height: 3vh;
+    width: 100vw;
+}
+
+.sheet-tab-container{
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+}
+.sheet-tab{
+    
+    padding-left:10px ;
+    padding-top: 3px;
+    padding-right:10px;
+    display: flex;
+    justify-content: center;
+    border-right: 0.5px solid lightgray;
+    font-weight: 600;
+
+}
+.sheet-scroller{
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    
+    cursor: pointer;
+}
+
+.sheet-tab.selected{
+    color: #217346;
+    border-bottom: 5px solid #217346;
+    outline: none;
+}
+.sheet-tab.selected:hover{
+    cursor: default;
+    background-color: #fff;
+}
+.sheet-tab:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+.sheet-tab-container {
+    margin-right: 10px;
+    display: flex;
+    border-left: 0.5px solid lightgray;
+}
+.add-sheet{
+    color: #217346;
+    padding-right: 15px;
+    
+}
+.add-sheet:hover,.scroller:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.sheet-options-modal{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 13%) 0px 6.4px 14.4px 0px, rgb(0 0 0 / 11%) 0px 1.2px 3.6px 0px
+}
+.option {
+    padding: 7px 15px 7px 15px;
+}
+.option:hover {
+    background-color: lightgray;
+    cursor: default;
+}
+
+.sheet-modal-parent{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sheet-rename-modal,.sheet-delete-modal{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 13%) 0px 6.4px 14.4px 0px, rgb(0 0 0 / 11%) 0px 1.2px 3.6px 0px;
+    padding: 15px;
+    min-width: 400px;
+}
+.sheet-modal-confirmation{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+.sheet-modal-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #217346;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 4px;
+}
+.sheet-modal-input-container,.sheet-modal-detail-container{
+    
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 25px;
+}
+.sheet-modal-input {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    outline-color: #217346;
+}
+.sheet-modal-input-title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    
+}
+.sheet-modal-detail-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sheet-modal-detail-title{
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    font-size: large;
+    align-items: center;
+}
+.delete-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #217346;
+    color: #fff;
+    padding-right:18px;
+    padding-left: 15px;
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+}
+.delete-button:hover{
+    cursor: pointer;
+    background-color: #145833;
+}
+.ok-button{
+    background-color: #217346;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 26px;
+    padding-right: 26px;
+}
+.cancel-button{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 26px;
+    padding-right: 26px;
+    border: 0.5px solid black;
+}
+.ok-button:hover{
+    background-color: #145833;
+    cursor: pointer;
+}
+.cancel-button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+.loader-parent{
+    background-color: rgba(255,255,255,0.5);
+    
+    flex-direction: column;
+}
+.loading-image{
+    height: 10vh;
+    width: 25vw;
+}
+.loading {
+    font-size: 30px;
+    color: #217346;
+}
+.error{
+    color: red;
+    font-size: 14px;
+}
+.sheet-tab-container::-webkit-scrollbar {
+    display: none;
+}
+
+.sheet-tab-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.file-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    width: 0vw;
+}
+.file-options-modal{
+    position: absolute;
+    width: 12rem;
+    background-color: #217346;
+    height: 100%;
+    color: #fff;
+}
+.file-recent-modal {
+    background-color: #fff;
+    height: 100%;
+    width: calc(50% - 12rem);
+}
+
+.close,.new,.open,.save {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.close-icon, .new-icon, .save-icon, .open-icon {
+    position: absolute;
+    left: 2rem;
+}
+.close {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.close-icon {
+    transform: rotate(90deg);
+}
+.close:hover, .new:hover, .save:hover, .open:hover {
+    background-color: #1c683e;
+    cursor: pointer;
+}
+.file-transparent-modal {
+    width: 50%;
+    height: 100%;
+}
