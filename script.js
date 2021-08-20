@@ -1,7 +1,6 @@
-//const { callbackify } = require("node:util");
 
 let s = $("#columns");
-//const ps = new PerfectScrollbar('#cells');
+// const ps = new PerfectScrollbar('#cells');
 for (let i = 1; i <= 100; i++) {
     let str = "";
     let n = i;
